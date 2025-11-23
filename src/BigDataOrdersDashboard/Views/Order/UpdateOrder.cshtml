@@ -1,0 +1,83 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "Update Order";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<section class="content pt-2"> 
+<div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>
+                    Sipariş Düzenleme
+                    <small class="text-muted">Sipariş Düzenleme İşlemleri Sayfası</small>
+                </h2>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Siparişler</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Sipariş Düzenleme</a></li>
+                    <li class="breadcrumb-item active">Ana Sayfa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row  clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+                         <form asp-action="UpdateOrder" method="post">
+                            <input type="hidden" asp-for="OrderId" />
+                            <div class="form-group">
+                                <label for="ProductId">Product Id</label>
+                                <input type="text" class="form-control" asp-for="ProductId" placeholder="Enter Product Id" required />
+                                <span asp-validation-for="ProductId" class="text-danger"></span>
+                            </div>
+                             <div class="form-group">
+                                <label for="CustomerId">Customer Id</label>
+                                <input type="text" class="form-control" asp-for="CustomerId" placeholder="Enter Customer Id" required />
+                                <span asp-validation-for="CustomerId" class="text-danger"></span>
+                            </div>
+                             <div class="form-group">
+                                <label for="Quantity">Quantity</label>
+                                <input type="number" class="form-control" asp-for="Quantity" placeholder="Enter Quantity" required />
+                                <span asp-validation-for="Quantity" class="text-danger"></span>
+                            </div>
+                                <div class="form-group">
+                                <label for="OrderStatus">Order Status</label>
+                                <select class="form-control" asp-for="OrderStatus" asp-items="ViewBag.OrderStatuses" required>
+                                    <option value="">-- Select Order Status --</option>
+                                </select>
+                                <span asp-validation-for="OrderStatus" class="text-danger"></span>
+                            </div>
+                                <div class="form-group">
+                                <label for="OrderDate">Order Date</label>
+                                <input type="date" class="form-control" asp-for="OrderDate" placeholder="Enter Order Date" required />
+                                <span asp-validation-for="OrderDate" class="text-danger"></span>
+                            </div>
+                                <div class="form-group">
+                                <label for="PaymentMethod">Payment Method</label>
+                                <select class="form-control" asp-for="PaymentMethod" asp-items="ViewBag.PaymentMethods" required>
+                                    <option value="">-- Select Payment Method --</option>
+                                </select>
+                                <span asp-validation-for="PaymentMethod" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="OrderNotes">Order Notes</label>
+                                <input type="text" class="form-control" asp-for="OrderNotes" placeholder="Enter Order Notes" required />
+                                <span asp-validation-for="OrderNotes" class="text-danger"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</section>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

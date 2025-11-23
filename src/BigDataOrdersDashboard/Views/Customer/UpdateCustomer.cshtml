@@ -1,0 +1,89 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Update Customer";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<section class="content pt-2"> 
+<div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>
+                    Müşteri Güncelleme
+                    <small class="text-muted">Müşteri İşlemleri Sayfası</small>
+                </h2>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="/"><i class="zmdi zmdi-home"></i> Müşteriler</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Müşteri Güncelleme</a></li>
+                    <li class="breadcrumb-item active">Ana Sayfa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row  clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+                         <form asp-action="UpdateCustomer" method="post">
+                            <input type="hidden" asp-for="CustomerId" />
+                            <div class="form-group">
+                                <label for="CustomerName">Customer Name</label>
+                                <input type="text" class="form-control" asp-for="CustomerName" placeholder="Enter Customer Name" required />
+                                <span asp-validation-for="CustomerName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="CustomerSurname">Customer Surname</label>
+                                <input type="text" class="form-control" asp-for="CustomerSurname" placeholder="Enter Customer Surname" required />
+                                <span asp-validation-for="CustomerSurname" class="text-danger"></span>      
+                            </div>
+                            <div class="form-group">
+                                <label for="CustomerEmail">Customer Email</label>
+                                <input type="email" class="form-control" asp-for="CustomerEmail" placeholder="Enter Customer Email" required />
+                                <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="CustomerPhone">Customer Phone</label>
+                                <input type="text" class="form-control" asp-for="CustomerPhone" placeholder="Enter Customer Phone" required />
+                                <span asp-validation-for="CustomerPhone" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="CustomerCountry">Customer Country</label>
+                                <input type="text" class="form-control" asp-for="CustomerCountry" placeholder="Enter Customer Country" required />
+                                <span asp-validation-for="CustomerCountry" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="CustomerCity">Customer City</label>
+                                <input type="text" class="form-control" asp-for="CustomerCity" placeholder="Enter Customer City" required />
+                                <span asp-validation-for="CustomerCity" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="CustomerDistrict">Customer District</label>
+                                <input type="text" class="form-control" asp-for="CustomerDistrict" placeholder="Enter Customer District" required />
+                                <span asp-validation-for="CustomerDistrict" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="CustomerAddress">Customer Address</label>
+                                <input type="text" class="form-control" asp-for="CustomerAddress" placeholder="Enter Customer Address" required />
+                                <span asp-validation-for="CustomerAddress" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="CustomerImageUrl">Customer Image URL</label>
+                                <input type="text" class="form-control" asp-for="CustomerImageUrl" placeholder="Enter Customer Image URL" required />
+                                <span asp-validation-for="CustomerImageUrl" class="text-danger"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</section>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
