@@ -1,6 +1,4 @@
-﻿@using BigDataOrdersDashboard.Dtos.ForecastDto
-
-@model IEnumerable<PaymentForecastData>
+﻿@model IEnumerable<dynamic>
 @{
     ViewData["Title"] = "Customer List";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -32,18 +30,20 @@
                          <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                             <thead>
                                 <tr>
-                                    <th>#</th>
                                     <th>Ödeme Yöntemi</th>
-                                    <th>Sipariş Sayısı</th>
+                                    <th>Ay</th>
+                                    
+                                    <th>Tahmini Sipariş Sayısı</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach (var forecastData in Model)
                                 {
                                     <tr>
-                                        <td>@forecastData.MonthIndex</td>                           
                                         <td>@forecastData.PaymentMethod</td>
-                                        <td>@forecastData.OrderCount</td>
+                                       <td>@forecastData.Month.ToString("yyyy-MM")</td>                         
+                                        
+                                       <td>@Math.Round(forecastData.OrderCount, 2)</td>
                                     </tr>
                                 }
                             </tbody>

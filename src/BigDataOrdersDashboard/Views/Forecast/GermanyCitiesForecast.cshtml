@@ -1,0 +1,65 @@
+﻿@model IEnumerable<dynamic>
+@{
+    ViewData["Title"] = "Germany Cities Forecast";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content pt-2"> 
+<div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>
+                    Almanya Şehirleri Tahmini
+                    <small class="text-muted">Almanya Şehirleri Tahminleri Sayfası</small>
+                </h2>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Almanya Şehirleri</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Almanya Şehirleri Tahminleri</a></li>
+                    <li class="breadcrumb-item active">Ana Sayfa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row  clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+                         <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                            <thead>
+                                <tr>
+                                     <th>Şehir</th>
+                                    <th>2024 Yılı Sipariş Sayısı</th>
+                                    <th>2025 Yılı Sipariş Sayısı</th>
+                                     <th>Yıl</th>
+                                     <th>Tahmini Sipariş Sayısı</th>
+                                     <th>2025'e Göre Fark</th>
+                                     <th>Büyüme Oranı (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var forecastData in Model)
+                                {
+                                        <tr>
+                                            <td>@forecastData.City</td>
+                                            <td>@forecastData.Year2024</td>
+                                            <td>@forecastData.Year2025</td>
+                                            <td>@forecastData.Year</td>
+                                            <td>@forecastData.ForecastedCount</td>
+                                            <td>@forecastData.DiffTo2025</td>
+                                            <td>@forecastData.GrowthRate</td> 
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                         
+
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</section>
