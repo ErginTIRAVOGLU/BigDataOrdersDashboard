@@ -3,15 +3,225 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 <section class="content pt-2"> 
-    <div class="container-fluid">
-        <div class="row  clearfix">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="body">
-                        <h4>İstatistik Sayfası</h4>
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>
+                    İstatistikler
+                    <small class="text-muted">İstatistik Sayfası</small>
+                </h2>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> İstatistikler</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">İstatistikler</a></li>
+                    <li class="breadcrumb-item active">Ana Sayfa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-group" style="font-size:48px color:#ffffff"></i>
                     </div>
+                <div class="content col-12">
+                    <div class="text">Category Count</div>
+                    <div class="number">@ViewBag.CategoryCount</div>
+                </div>
                 </div>
             </div>
         </div>
-    </div>   
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-parpl">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-shopping-cart" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Product Count</div>
+                    <div class="number">@ViewBag.ProductCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-blue">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-receipt" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Order Count</div>
+                    <div class="number">@ViewBag.OrderCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-account" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Customer Count</div>
+                    <div class="number">@ViewBag.CustomerCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-coral ">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-check" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Completed Order Count</div>
+                    <div class="number">@ViewBag.CompletedOrderCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-blue">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-time" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Pending Order Count</div>
+                    <div class="number">@ViewBag.PendingOrderCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-apple" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Apple Pay Payment Count</div>
+                    <div class="number">@ViewBag.ApplePayPaymentCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-parpl">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-card" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Credit Card Payment Count</div>
+                    <div class="number">@ViewBag.CreditCardPaymentCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-coral ">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-money" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Cash Payment Count</div>
+                    <div class="number">@ViewBag.CashPaymentCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-bank" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Banking Payment Count</div>
+                    <div class="number">@ViewBag.BankingPaymentCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-parpl">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-truck" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Cash On Delivery Payment Count</div>
+                    <div class="number">@ViewBag.CashOnDeliveryPaymentCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-flag" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Customer Country Count</div>
+                    <div class="number">@ViewBag.CustomerCountry</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-coral ">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-truck" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Customer City Count</div>
+                    <div class="number">@ViewBag.CustomerCity</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-hotel" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Last Month Orders Count</div>
+                    <div class="number">@ViewBag.LastMonthOrdersCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-parpl">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-shopping-cart" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">This Month Orders Count</div>
+                    <div class="number">@ViewBag.ThisMonthOrdersCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </section>

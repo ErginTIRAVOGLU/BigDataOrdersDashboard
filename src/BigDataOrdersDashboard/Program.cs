@@ -1,5 +1,6 @@
 using BigDataOrdersDashboard.Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.ML;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<BigDataOrdersDbContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddScoped<MLContext>();
 
 
 var app = builder.Build();
@@ -30,7 +33,7 @@ app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
+    pattern: "{controller=Customer}/{action=CustomerList}/{id?}")
     .WithStaticAssets();
 
 

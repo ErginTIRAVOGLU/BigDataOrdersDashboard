@@ -1,0 +1,227 @@
+﻿@{
+    ViewData["Title"] = "Textual Statistics Dashboard";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<section class="content pt-2"> 
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>
+                    İstatistikler
+                    <small class="text-muted">Metinsel İstatistik Sayfası</small>
+                </h2>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> İstatistikler</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">İstatistikler</a></li>
+                    <li class="breadcrumb-item active">Metinsel İstatistik Sayfası</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-group" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">The country with the most orders</div>
+                    <div class="number">@ViewBag.CountryWithTheMostOrders </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-parpl">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-shopping-cart" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">The country with the most orders Count</div>
+                    <div class="number">@ViewBag.CountryWithTheMostOrdersCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-blue">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-receipt" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">High Priced Product In Country</div>
+                    <div class="number">@ViewBag.HighPricedProductInCountry</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-account" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">High Priced Product Price In Country</div>
+                    <div class="number">@ViewBag.HighPricedProductPriceInCountry</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-coral ">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-check" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">High Priced Product</div>
+                    <div class="number">@ViewBag.HighPricedProduct</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-blue">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-time" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">High Priced Product Price</div>
+                    <div class="number">@ViewBag.HighPricedProductPrice</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-apple" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">High Priced Order Price</div>
+                    <div class="number">@ViewBag.HighPricedOrderPrice</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-parpl">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-card" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Top Selling Category</div>
+                    <div class="number">@ViewBag.TopSellingCategory</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-coral ">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-money" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Top Selling Category Sales</div>
+                    <div class="number">@ViewBag.TopSellingCategorySales</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-bank" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Highest Stock Product</div>
+                    <div class="number">@ViewBag.HighestStockProduct</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-parpl">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-truck" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Highest Stock Quantity</div>
+                    <div class="number">@ViewBag.HighestStockQuantity</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-flag" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Most Popular Payment Method</div>
+                    <div class="number">@ViewBag.MostPopularPaymentMethod</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-coral ">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-truck" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Most Popular Payment Count</div>
+                    <div class="number">@ViewBag.MostPopularPaymentCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-hotel" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Most Active Customer</div>
+                    <div class="number">@ViewBag.MostActiveCustomer</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-parpl">
+                <div class="body">
+                    <div class="icon col-12 text-center">
+                        <i class="zmdi zmdi-shopping-cart" style="font-size:48px color:#ffffff"></i>
+                    </div>
+                <div class="content col-12">
+                    <div class="text">Most Active Customer Orders Count</div>
+                    <div class="number">@ViewBag.MostActiveCustomerOrdersCount</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
